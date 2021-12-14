@@ -1,0 +1,28 @@
+@import '../../../scss/_utilities/variables';
+@import '../../../scss/_utilities/mixins';
+.username{
+    display: flex;
+    justify-content: space-between;
+}
+
+#post{
+    margin-top: 3%;
+}
+
+#comment{
+    margin-bottom: 3%;
+}
+
+@include respond-to(human){
+    .mat-card{
+        width: 75%;
+    }
+    #first{
+        display: flex;
+        justify-content: center;
+    }
+    .username{
+        display: flex;
+        justify-content: space-between;
+    }
+}

@@ -1,0 +1,28 @@
+<section class="container">
+    <header>
+        <h1>Crear Post</h1>
+    </header>
+    <main>
+        <form [formGroup]="form">
+            <mat-form-field>
+                <mat-label>Introduzca el titulo</mat-label>
+                <input matInput formControlName="title" type="text">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Introduzca su Id de Usuario</mat-label>
+                <input matInput formControlName="userId" type="number">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Introduzca el Post</mat-label>
+                <textarea matInput formControlName="body"></textarea>
+            </mat-form-field>
+        </form>
+
+        <section>
+            <main id="submit">
+                <button mat-raised-button (click)="clear()">Limpiar</button>
+                <button type="submit" (click)="save()"mat-raised-button>Crear</button>
+            </main>
+        </section>
+    </main>
+</section>

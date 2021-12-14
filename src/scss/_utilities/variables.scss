@@ -1,0 +1,8 @@
+// Breakpoints
+
+$breakpoints: (
+    'dwarf': ('only screen and (min-width: 600px)'),
+    'human': ('only screen and  (min-width: 768px)'),
+    'orc': ('only screen and (min-width: 992px)'),
+    'giant': ('only screen and (min-width: 1200px)')
+);

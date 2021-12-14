@@ -1,0 +1,54 @@
+<section class="container">
+    <header>
+        <h1>Post Details</h1>
+    </header>
+    <main id="first">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>
+                {{post?.title}}
+            </mat-card-title>
+            <mat-card-subtitle>
+                <section class="username">
+                    <span><mat-icon>person</mat-icon> {{user?.username}}</span>
+                    <span><mat-icon>email</mat-icon> {{user?.email}}</span>
+                </section>
+                <section class="username">
+                    <span><mat-icon>language</mat-icon>{{user?.website}}</span>
+                </section>
+            </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <section>
+                <p>
+                    {{post?.body}}
+                </p>
+            </section>
+            <section>
+                <header>
+                    <h3>
+                        Comments
+                    </h3>
+                </header>
+                <main *ngFor="let comment of comments">
+                    <mat-card id="comment">
+                        <mat-card-header>
+                            <mat-card-title>
+                                <h4>{{comment?.name}}</h4>
+                            </mat-card-title>
+                            <mat-card-subtitle>
+                                <span><mat-icon>email</mat-icon>{{comment?.email}}</span>
+                            </mat-card-subtitle>
+                        </mat-card-header>
+                        <mat-card-content>
+                            <p>
+                                {{comment?.body}}
+                            </p>
+                        </mat-card-content>
+                    </mat-card>
+                </main>
+            </section>
+        </mat-card-content>
+    </mat-card>
+    </main> 
+</section>

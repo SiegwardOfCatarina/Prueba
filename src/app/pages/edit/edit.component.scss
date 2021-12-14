@@ -1,0 +1,33 @@
+@import '../../../scss/_utilities/variables';
+@import '../../../scss/_utilities/mixins';
+.mat-form-field{
+    width: 100%;
+}
+
+#submit{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+@include respond-to(human){
+    header{
+        form{
+            display: flex;
+            justify-content: center;
+        }
+    }
+    #formu{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .mat-form-field{   
+        width: 75%;
+      }
+}

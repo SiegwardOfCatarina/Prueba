@@ -1,0 +1,93 @@
+@import '../../../scss/_utilities/variables';
+@import '../../../scss/_utilities/mixins';
+table {
+    width: 100%;
+  }
+
+  .w-100{
+    width: 100%;
+  }
+  tr.example-detail-row {
+    height: 0;
+  }
+  
+  tr.example-element-row:not(.example-expanded-row):hover {
+    background: whitesmoke;
+  }
+  
+  tr.example-element-row:not(.example-expanded-row):active {
+    background: #efefef;
+  }
+  
+  .example-element-row td {
+    border-bottom-width: 0;
+  }
+  
+  .example-element-detail {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    text-align: center;
+  }
+  
+  .example-element-diagram {
+    min-width: 80px;
+    border: 2px solid black;
+    padding: 8px;
+    font-weight: lighter;
+    margin: 8px 0;
+    height: 104px;
+  }
+  
+  .example-element-symbol {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: normal;
+  }
+  
+  .example-element-description {
+    padding: 16px;
+  }
+  
+  .example-element-description-attribution {
+    opacity: 0.5;
+  }
+
+  #actionButtons{
+      display: flex;
+      justify-content: space-evenly;
+      margin-top: 2%;
+      margin-bottom: 3%;
+  }
+
+  #create{
+      display: flex;
+      justify-content: center;
+      margin-top: 5%;
+
+     main{
+       margin-bottom: 4%;
+     }
+  }
+
+  .mat-form-field{
+    width: 100%;
+  }
+@include respond-to(human){
+  .breakPoint{
+   
+      .mat-form-field{
+        width: 75%;
+      }
+
+      main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        form{
+          display: flex;
+          justify-content: center;
+        }
+      }
+  }
+}

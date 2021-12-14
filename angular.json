@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": false
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -31,7 +34,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/scss/main.scss"
             ],
             "scripts": []
           },
@@ -72,10 +75,12 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "Izertis:build:production"
+              "browserTarget": "Izertis:build:production",
+              "proxyConfig":"proxy.config.json"
             },
             "development": {
-              "browserTarget": "Izertis:build:development"
+              "browserTarget": "Izertis:build:development",
+              "proxyConfig":"proxy.config.json"
             }
           },
           "defaultConfiguration": "development"
@@ -94,12 +99,13 @@
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "inlineStyleLanguage": "scss",
+            "codeCoverage": true,
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/scss/main.scss"
             ],
             "scripts": []
           }

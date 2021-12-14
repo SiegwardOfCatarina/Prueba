@@ -1,0 +1,39 @@
+<section class="container">
+    <header>
+        <h1>Editar Post</h1>
+        <form>
+            <mat-form-field appearance="fill">
+                <mat-label>Select Post to Edit</mat-label>
+                <mat-select (selectionChange)="getPostData($event.value)">
+                  <mat-option *ngFor="let id of postsIds" value="{{id}}">{{id}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </form>
+    </header>
+    <main id="formu">
+        <form [formGroup]="form">
+            <mat-form-field>
+                <mat-label>Post id</mat-label>
+                <input matInput formControlName="id" type="number">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Introduzca el titulo</mat-label>
+                <input matInput formControlName="title" type="text">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Introduzca su Id de Usuario</mat-label>
+                <input matInput formControlName="userId" type="number">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Introduzca el Post</mat-label>
+                <textarea matInput formControlName="body"></textarea>
+            </mat-form-field>
+        </form>
+
+        <section>
+            <main id="submit">
+                <button type="submit" (click)="edit()"mat-raised-button>Editar</button>
+            </main>
+        </section>
+    </main>
+</section>

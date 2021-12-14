@@ -1,0 +1,14 @@
+footer {
+    background-color: rgba($color: #3F51B5, $alpha: 1.0);
+}
+#fnav {
+    display: flex;
+    justify-content: center;
+  .mat-list {  display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    a{
+        color: white;
+    }
+    }
+}
